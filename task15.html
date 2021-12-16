@@ -1,0 +1,30 @@
+<!-- Write a JavaScript program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1.   -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to create a new string from a given string changing the position of first and last characters. The string length must be greater than or equal to 1.</h3>
+    <input type="text" id="file" style="margin-top: 10px" placeholder="enter the string" ><br>
+    <button type="button" style="margin-top: 10px" onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+      function fun(){
+       let str=document.getElementById("file").value; 
+       let a,b;
+            if(str.length>1){
+                str=str.split("");
+                a=str[0];
+                b=str[str.length-1];
+                str[0]=b;
+                str[str.length-1]=a;
+                str=str.join("");
+                document.getElementById("display").innerHTML =str;}
+            else {
+                document.getElementById("display").innerHTML ="string length is not enough";
+            }
+    }
+    </script>
+</body>
+</html>

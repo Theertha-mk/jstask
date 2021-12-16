@@ -1,0 +1,29 @@
+<!-- Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50.    -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to check two given numbers and return true if one of the number is 50 or if their sum is 50. </h3>
+    <input type="text" id="number" placeholder="Enter the number" >
+    <button type="button"  onclick="fun()">Result</button>
+    <p id = "display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+        let num=document.getElementById("number").value;;
+        let sum;
+        let result;
+             sum=num+50;
+           if(num==0){ result=true;
+               document.getElementById("display").innerHTML =result}
+           else if((num==50)||(num==sum)){
+               result=true;
+           }
+           else {
+            result=false;}
+            document.getElementById("display").innerHTML =(result);         
+    }
+    </script>
+</body>
+</html>

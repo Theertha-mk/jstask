@@ -1,0 +1,21 @@
+<!-- Write a JavaScript exercise to get the extension of a filename. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3> Write a JavaScript exercise to get the extension of a filename.</h3>
+    <input type="text" id="file" placeholder="filename with extension" >
+    <button type="button" onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+
+    <script>
+        function fun(){
+        let ext=document.getElementById("file").value; 
+        let result=ext.split(".").pop();
+        document.getElementById("display").innerHTML =("extension is "+result);
+        }
+    </script>
+</body>
+</html>

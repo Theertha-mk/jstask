@@ -1,0 +1,31 @@
+<!-- Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to compute the sum of the two given integers. If the two values are same, then returns triple their sum</h3>
+    <input type="text" id="file1" placeholder="first number" >
+    <input type="text" id="file2" placeholder="second number" >
+    <button type="button"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+        let a=parseInt(document.getElementById("file1").value); 
+        let b=parseInt(document.getElementById("file2").value); 
+        let sum;
+        if(a===b){
+              sum=3*(a+b);
+              document.getElementById("display").innerHTML =sum; 
+         }
+        else {
+             sum=a+b;
+             document.getElementById("display").innerHTML =sum; 
+           };
+          
+    }
+    </script>
+    
+</body>
+</html>

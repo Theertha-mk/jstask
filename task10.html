@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19.   -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple their absolute difference if the specified number is greater than 19.  </h3>
+    <input type="text" id="file" placeholder="enter a number" >
+    <button type="button"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+    function fun(){
+        let num=parseInt(document.getElementById("file").value); 
+        let diff=Math.abs(19-num);
+       if(num>19){
+           diff=(diff*3);
+        }
+        document.getElementById("display").innerHTML =(diff);
+    }
+    </script>
+</body>
+</html>

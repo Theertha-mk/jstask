@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to rotate the string 'bititude' in right direction by periodically removing one letter from the end of the string and attaching it to the front. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bititude</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to rotate the string 'bititude' in right direction by periodically removing one letter from the end of the string and attaching it to the front.</h3>
+    <button type="button" onclick="fun()">Result</button>
+    <p id = "display" style="margin-top: 10px;" > </p>
+    <script>
+    let str="bititude";
+    let rev="";
+    function fun(){
+     for(let i=str.length-1;i>=0;--i){
+            rev+=str[i];
+       }
+       document.getElementById("display").innerHTML =rev;
+    }
+    </script>
+</body>
+</html>
+

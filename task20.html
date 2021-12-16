@@ -1,0 +1,27 @@
+<!-- Write a JavaScript program to check whether a string "Script" presents at 5th (index 4) position in a given string, if "Script" presents in the string return the string without "Script" otherwise return the original one.    -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to check whether a string "script" presents at 5th (index 4) position in a given string, if "script" presents in the string return the string without "Script" otherwise return the original one.</h3>
+    <input type="text" id="file" style="margin-top: 10px" placeholder="enter the string " ><br>
+    <button type="button" style="margin-top: 10px"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+      function fun(){
+      let str=document.getElementById("file").value;
+      if(str.slice(4,10)=="script"){
+         str=str.split("");
+         str.splice(4,6);
+         str=str.join("");
+         document.getElementById("display").innerHTML =str;
+        }
+      else{ document.getElementById("display").innerHTML =str;
+      }
+      }
+
+    </script>
+</body>
+</html>

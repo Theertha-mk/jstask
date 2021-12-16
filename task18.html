@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more.</h3>
+    <input type="text" id="file" style="margin-top: 10px" placeholder="enter the string " ><br>
+    <button type="button" style="margin-top: 10px" onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+        let str=document.getElementById("file").value;
+        if(str.length>=3){
+        str=str[str.length-3]+str[str.length-2]+str[str.length-1]+str+str[str.length-3]+str[str.length-2]+str[str.length-1];
+        document.getElementById("display").innerHTML =str;
+        }
+        else{  document.getElementById("display").innerHTML ="The string length must be 3 or more. "}
+    } 
+    </script>
+</body>
+</html>

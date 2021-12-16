@@ -1,0 +1,24 @@
+<!-- Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched". -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>random number</title>
+</head>
+<body>
+    <h3>Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched". </h3>
+    <input type="text" id="number" placeholder="Enter the number" >
+    <button type="button" onclick="fun()">Result</button>
+    <p id = "display" style="margin-top: 10px;" > </p>
+    <script>
+     function fun(){
+     let ranNum=document.getElementById("number").value;
+     let result=Math.floor(Math.random()*(10-1+1));
+     console.log(result);
+     if (ranNum==result){
+        document.getElementById("display").innerHTML ="\"Good Work\" ";
+     }
+     else{  document.getElementById("display").innerHTML ="\"Not Matched\" ";}  
+    }
+    </script>
+</body>
+</html>

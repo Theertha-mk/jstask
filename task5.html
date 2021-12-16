@@ -1,0 +1,39 @@
+<!-- mock calculator -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+<style>
+        #calc{
+            border:3px solid black;
+            width:400px;
+            text-align: center; 
+            background-color: yellow;  
+        }
+</style>
+</head>
+<body>
+    <h3> Mock calculator </h3>
+    <form id="calc">
+        <input id = "display" style="margin-top: 10px;" type ="text" name = "result"> <br> <br> 
+        <input type = "button" value = "1" onclick = "calc.result.value += '1' ">
+        <input type = "button" value = "2" onclick = "calc.result.value += '2' ">
+        <input type = "button" value = "3" onclick = "calc.result.value += '3' ">
+        <input type = "button" value = "+" onclick = "calc.result.value += '+' "> <br><br> 
+        <input type = "button" value = "4" onclick = "calc.result.value += '4' ">
+        <input type = "button" value = "5" onclick = "calc.result.value += '5' ">
+        <input type = "button" value = "6" onclick = "calc.result.value += '6' ">
+        <input type = "button" value = "-" onclick = "calc.result.value += '-' "> <br><br>  
+        <input type = "button" value = "7" onclick = "calc.result.value += '7' ">
+        <input type = "button" value = "8" onclick = "calc.result.value += '8' ">
+        <input type = "button" value = "9" onclick = "calc.result.value += '9' ">
+        <input type = "button" value = "*" onclick = "calc.result.value += '*' "> <br><br>
+        <input type = "button" value = "0" onclick = "calc.result.value += '0' ">  
+        <input type = "button" value = "/" onclick = "calc.result.value += '/' ">  
+        <input type = "button" value = "." onclick = "calc.result.value += '.' "> 
+
+        <input type = "button" value = "=" onclick = "calc.result.value = eval(calc.result.value) "> 
+        <input type = "button" value = "Clear All" onclick = "calc.result.value= ' ' " >  
+    </form>
+</body>
+</html>
