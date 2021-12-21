@@ -1,0 +1,24 @@
+<!-- Write a JavaScript program to convert the letters of a given string in alphabetical order -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>    
+</head>
+<body>
+    <h3>Write a JavaScript program to convert the letters of a given string in alphabetical order</h3>
+    <input type="text" id="file" style="margin-top: 10px" placeholder="enter a number" ><br>
+    <button type="button" style="margin-top: 10px"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+         let str=document.getElementById("file").value;
+         str=str.toLowerCase();
+         str=str.split("");
+         str=str.sort();
+         str=str.join("");
+         document.getElementById("display").innerHTML=str;
+        }
+       
+    </script>
+</body>
+</html>

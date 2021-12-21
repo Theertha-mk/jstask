@@ -1,0 +1,29 @@
+<!-- Write a JavaScript program to count the number of vowels in a given string.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>    
+</head>
+<body>
+    <h3>Write a JavaScript program to count the number of vowels in a given string. </h3>
+    <input type="text" id="file" style="margin-top: 10px" placeholder="enter a string" ><br>
+    <button type="button" style="margin-top: 10px"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+         let str=document.getElementById("file").value;
+         str=str.toLowerCase();
+         let count=0;
+         for(let i=0;i<str.length;++i){
+             if((str[i]=="a")||(str[i]=="e")||(str[i]=="i")||(str[i]=="o")||(str[i]=="u")){
+                count+=1
+             }
+         }
+         if(count==0){
+         document.getElementById("display").innerHTML="no vowels";
+        }
+        else{ document.getElementById("display").innerHTML="number of vowels is "+count;}
+    }
+    </script>
+</body>
+</html>

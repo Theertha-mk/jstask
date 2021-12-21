@@ -1,0 +1,47 @@
+<!--Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.     -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>    
+</head>
+<body>
+    <h3>Write a JavaScript program to find the larger value between the first or last and set all the other elements with that value. Display the new array.   </h3>
+    <h4>enter 5 numbers in the array</h4>
+<form class="" action="" method="post">
+    <input type="text" name="array[]" value="" required><br>
+    <input type="text" name="array[]" value="" required><br>
+    <input type="text" name="array[]" value="" required><br>
+    <input type="text" name="array[]" value="" required><br>
+    <input type="text" name="array[]" value="" required><br>
+    <button type="button" name="button" onclick="fun()">Submit</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+</form>
+<script>
+    function fun(){
+        var input = document.getElementsByName('array[]');
+        let arr="";
+        for(let i=0;i<5;++i){
+            var a = input[i];
+            arr = arr+ a.value + ", ";
+        }
+        arr=arr.split(",");
+        arr.pop();
+
+     //     let largest=arr[0];
+    //     for (var i = 0; i < 5; i++) {
+    //       if (largest < arr[i] ) {
+    //          largest = arr[i];
+    //        }
+    //     }
+
+       largest=Math.max(arr[0],arr[1],arr[2],arr[3],arr[4]);
+       console.log(largest);
+
+        arr[0]=arr[1]=arr[2]=arr[3]=arr[4]=largest;
+        console.log(arr);
+        document.getElementById("display").innerHTML="new array is ["+arr+"]" ;
+  
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!--Write a JavaScript program to convert a given number to hours and minutes.  
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to convert a given number to hours and minutes.</h3>
+    <input type="text" id="minute" placeholder="time in minutes" >
+    <button type="button" onclick="fun1()">Result</button>
+    <p id = "display1" style="margin-top: 10px;" > </p>
+    <input type="text" id="hour" placeholder="time in hours" >
+    <button type="button" onclick="fun2()">Result</button>
+    <p id = "display2" style="margin-top: 10px;" > </p>
+
+<script>
+  function fun1(){
+   let min=document.getElementById("minute").value;
+   let result1=min/60; 
+   document.getElementById("display1").innerHTML ="time in hour is "+result1+"hours";}
+ function fun2(){
+   let hr=document.getElementById("hour").value; 
+   let result2=hr*60 
+   document.getElementById("display2").innerHTML ="time in minute is "+result2+"minutes";}
+</script>
+
+</body>
+</html>

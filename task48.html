@@ -1,0 +1,33 @@
+<!--  Write a JavaScript program to find the number of times to replace a given number with the sum of its digits until it convert to a single digit number.
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>    
+</head>
+<body>
+    <h3> Write a JavaScript program to find the number of times to replace a given number with the sum of its digits until it convert to a single digit number.
+    </h3>
+    <input type="text" id="file" style="margin-top: 10px" placeholder="enter three digit number" ><br>
+    <button type="button" style="margin-top: 10px" onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+     function fun(){
+        num=document.getElementById("file").value;
+        var digit_sum = 0; var result = 0;
+        function fun1(){
+        while (num) {
+            digit_sum += num % 10;
+            num = Math.floor(num / 10);
+        }
+        return digit_sum;
+     }
+       while (num >= 10) {
+        result += 1;
+        num = fun1(num);}
+        fun1(num);
+    document.getElementById("display").innerHTML=digit_sum;
+   }
+    </script>
+</body>
+</html>

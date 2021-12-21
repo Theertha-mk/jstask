@@ -1,0 +1,24 @@
+<!-- Write a JavaScript program to concatenate two strings except their first character. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>    
+</head>
+<body>
+    <h3>Write a JavaScript program to concatenate two strings except their first character.</h3>
+    <input type="text" id="file1" style="margin-top: 10px" placeholder="enter first string" ><br>
+    <input type="text" id="file2" style="margin-top: 10px" placeholder="enter second string" ><br>
+    <button type="button" style="margin-top: 10px"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+            let str1=document.getElementById("file1").value;
+            let str2=document.getElementById("file2").value;
+            let a=str1.slice(1,str1.length);
+            let b=str2.slice(1,str2.length);
+            result=a+b;
+            document.getElementById("display").innerHTML=result;
+        }
+    </script>
+</body>
+</html>

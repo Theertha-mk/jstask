@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to reverse a given string. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+<h3>Write a JavaScript program to reverse a given string.</h3>
+<h3>"bititude"</h3>
+    <button type="button" onclick="fun()">Result</button>
+    <p id = "display" style="margin-top: 10px;" > </p>
+    <script>
+    let str="bititude";
+    let rev="";
+    function fun(){
+     for(let i=str.length-1;i>=0;--i){
+            rev+=str[i];
+       }
+       document.getElementById("display").innerHTML =rev;
+    }
+    </script>
+</body>
+</html>

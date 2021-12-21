@@ -1,0 +1,32 @@
+<!-- Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3> Write a JavaScript program to check whether the last digit of the three given positive integers is same.  </h3>
+    <input type="text" id="file1" style="margin-top: 10px" placeholder="enter first number" ><br>
+    <input type="text" id="file2" style="margin-top: 10px" placeholder="enter second number" ><br>
+    <input type="text" id="file3" style="margin-top: 10px" placeholder="enter third number" ><br>
+    <button type="button" style="margin-top: 10px"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+            let num1=document.getElementById("file1").value;
+            let num2=document.getElementById("file2").value;
+            let num3=document.getElementById("file3").value;
+            let a=num1%10; b=num2%10;  c=num3%10;
+            if (num1>0&&num2>0&&num3>0){
+                if ((a==b && b==c&& c==a)||(a==b || b==c || c==a)){
+                    document.getElementById("display").innerHTML="true";
+                }
+                else{
+                    document.getElementById("display").innerHTML="false";
+                }
+            }
+            else{  document.getElementById("display").innerHTML="Not a positive integer";}
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!-- Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>    
+</head>
+<body>
+    <h3>Write a JavaScript program to move last three character to the start of a given string. The string length must be greater or equal to three. </h3>
+    <input type="text" id="file" style="margin-top: 10px" placeholder="enter the string" ><br>
+    <button type="button" style="margin-top: 10px"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+            let str=document.getElementById("file").value;let a;
+            if(str.length>=3){
+                str=str.slice(str.length-3,str.length)+str.slice(0,str.length-3);
+                document.getElementById("display").innerHTML=str;
+            }else{document.getElementById("display").innerHTML="write a string with at least three character";}   
+        }
+    </script>
+</body>
+</html>

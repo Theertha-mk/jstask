@@ -1,0 +1,25 @@
+<!--  Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas.   
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>    
+</head>
+<body>
+    <h3> Write a JavaScript program to divide two positive numbers and return a string with properly formatted commas.</h3>
+    <input type="text" id="file1" style="margin-top: 10px" placeholder="enterfirst number" ><br>
+    <input type="text" id="file2" style="margin-top: 10px" placeholder="enter second number" ><br>
+    <button type="button" style="margin-top: 10px"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+            let num1=document.getElementById("file1").value;
+            let num2=document.getElementById("file2").value;
+            let sum=Math.round(num1/num2);
+            sum=sum.toString();
+            resul=sum.split("");
+            document.getElementById("display").innerHTML=resul;
+        }
+    </script>
+</body>
+</html>

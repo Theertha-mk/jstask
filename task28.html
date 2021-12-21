@@ -1,0 +1,30 @@
+<!--  Write a JavaScript program to check from three given integers that whether a number is greater than or equal to 20 and less than one of the others.   -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to check from three given integers that whether a number is greater than or equal to 20 and less than one of the others.   </h3>
+    <input type="text" id="file1" style="margin-top: 10px" placeholder="enter first number" ><br>
+    <input type="text" id="file2" style="margin-top: 10px" placeholder="enter second number" ><br>
+    <input type="text" id="file3" style="margin-top: 10px" placeholder="enter third number" ><br>
+    <button type="button" style="margin-top: 10px"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+    <script>
+        function fun(){
+            let a=document.getElementById("file1").value;
+            let b=document.getElementById("file2").value;
+            let c=document.getElementById("file3").value;
+            if((a>=20)&&(b>=20)&&(c>=20)){
+                     if((a<b||a<c) || (b<a||b<c) || (c<a||c<b)){
+                        document.getElementById("display").innerHTML="true"; 
+                     }
+                     else{ document.getElementById("display").innerHTML="false";}
+
+            }else{ document.getElementById("display").innerHTML="false";}
+            
+        }
+    </script>
+</body>
+</html>

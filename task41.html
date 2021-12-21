@@ -1,0 +1,40 @@
+<!-- Write a JavaScript program to check whether 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1.     -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>    
+</head>
+<body>
+    <h3>Write a JavaScript program to check whether 1 appears in first or last position of a given array of integers. The array length must be greater or equal to 1</h3><br><br>
+    <h4>enter 5 elements in the array</h4>
+<form class="" action="" method="post">
+    <input type="text" name="array[]" value="" required><br>
+    <input type="text" name="array[]" value="" required><br>
+    <input type="text" name="array[]" value="" required><br>
+    <input type="text" name="array[]" value="" required><br>
+    <input type="text" name="array[]" value="" required><br>
+    <button type="button" name="button" onclick="fun()">Submit</button>
+    <p id ="display1" style="margin-top: 10px;" > </p>
+    <p id ="display2" style="margin-top: 10px;" > </p>
+</form>
+<script>
+    function fun(){
+        var input = document.getElementsByName('array[]');
+        let arr="";
+        for(let i=0;i<5;++i){
+            var a = input[i];
+            arr = arr+ a.value + ", ";
+        }
+        arr=arr.split(",");
+        arr.pop();
+        if( (arr[0]==1) || (arr[arr.length - 1]==1 ) )
+        {
+            document.getElementById("display1").innerHTML ="array is " + "["+arr+"]";
+            document.getElementById("display2").innerHTML ="1 appears in first or last position of a given array of integers."
+        }
+        else{ document.getElementById("display1").innerHTML ="array is " + "["+arr+"]";
+        document.getElementById("display2").innerHTML =" 1 do not appears in first or last position of a given array of integers."}
+    }
+</script>
+</body>
+</html>
