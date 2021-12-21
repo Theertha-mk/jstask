@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to check whether a matrix is a diagonal matrix or not. -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to check whether a matrix is a diagonal matrix or not.</h3>
+    <script>
+        function diagonal(m) {
+          for (var i = 0; i < m.length; i++) {
+              for (var j = 0; j < m.length; j++) {
+                if (i !== j && m[i][j] !== 0) 
+                 return false;
+              }
+            }
+         return true;
+        }
+console.log(diagonal([[1, 0, 0], [0, 2, 0], [0, 0, 3] ]));
+console.log(diagonal([[1, 0, 0], [0, 2, 3], [0, 0, 3] ]));
+    </script>
+</body>
+</html>

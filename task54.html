@@ -1,0 +1,26 @@
+<!-- Write a JavaScript program to check whether a given matrix is lower triangular or not.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3>Write a JavaScript program to check whether a given matrix is lower triangular or not. </h3>
+    <script>
+        function ltm(m) {
+        for (var i = 0; i < m.length; i++) 
+          {
+           for (var j = i+1; j < m.length; j++) 
+            {
+             if (m[i][j] !== 0)
+              return false;
+        }
+    }
+    return true;
+}
+
+console.log(ltm([[1, 0, 0],[4, 2, 0], [3, 3, 3]]));
+console.log(ltm([[1, 0, 1],[2, 0, 0], [0, 3, 3]]));
+    </script>
+</body>
+</html>

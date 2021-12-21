@@ -1,0 +1,27 @@
+<!--  Write a JavaScript program to calculate the sum of n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer. 
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h3> Write a JavaScript program to calculate the sum of n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integer. </h3>
+    <input type="text" id="file" style="margin-top: 10px" placeholder="enter number" ><br>
+    <button type="button" style="margin-top: 10px"  onclick="fun()">Result</button>
+    <p id ="display" style="margin-top: 10px;" > </p>
+<script>
+     function fun(){
+        let num=document.getElementById("file").value;
+        let sum = 0;
+        while (num > 0) {
+        sum += Math.abs(num);
+        num = Math.floor(num / 2);
+      }
+      document.getElementById("display").innerHTML=sum;
+      }
+</script>
+       
+   
+</body>
+</html>
